@@ -4,7 +4,7 @@ from tkinter import messagebox
  
 top = tkinter.Tk() 
 top.title("TRUMP SHOOTER") 
-top.wm_iconbitmap("favicon.ico") 
+top.wm_iconbitmap("textures/favicon.ico") 
 C = tkinter.Canvas(top, bg="blue", height=250, width=300) 
  
  
