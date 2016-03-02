@@ -1,4 +1,4 @@
-Read this for seudo notes and code to be used. Enter suggestions for modules and class structure here aswell.
+Read this for pseudo notes and code to be used. Enter suggestions for modules and class structure here aswell.
 >>
 >>
 >>
