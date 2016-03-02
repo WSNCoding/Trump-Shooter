@@ -6,9 +6,9 @@ while True:
     response = input("Do you want to buy or upgrade? upgrade/buy \n")
     response == response.lower()
     if response == "upgrade":
-        print("Taking you to the MUSLIM style smithy")
+        print("Taking you to the metal store")
     elif response == "buy":
-        print("Taking you to the MEXICAN style store")
+        print("Taking you to the barracks")
     else:
         print("Please enter a valid answer!")
     time.sleep(4)
