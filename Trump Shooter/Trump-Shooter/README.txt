@@ -1,5 +1,5 @@
 Read this for pseudo notes and code to be used. Enter suggestions for modules and class structure here aswell.
->>
+>>Can we have a working home screen were we have shop exit and start as i got movement mechanics pretty much and i justneed a charecter to move aroun the screen ----NinjutsuFish
 >>
 >>
 Access for all in Trump Shooter team
