@@ -15,3 +15,6 @@ def windowCode():
 
     bttn = Button(frame, text="Click me")#Buttons
     bttn.grid()
+
+    im = Image.open("\textures\GetAttachment.jpg");
+    myImage.show();
