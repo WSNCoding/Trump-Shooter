@@ -5,9 +5,7 @@ from tkinter import *
 from player import *
 from tkinterButtons import *
 from player import *
-
-import os
-
+#Define mainloop
 def main():
   print('Running main.py')
   windowCode()
