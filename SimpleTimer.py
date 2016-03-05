@@ -1,19 +1,24 @@
 import time
 
-b = 10 # just change what b equals to edit the time
+b = 10 #Use this to set timer not input as this would allow the user interaction
 a = b
-
-response = input("Do you want to start the timer? yes/no \n")
-resposne = response.lower()
-if response == "yes":
-    while True:
-        time.sleep(1)
-        a -= 1
-        print(a)
-        if a == 0:
-            print(b,"seconds is up")
-            break
-elif response == "no":
-    print("Why did you even run this programme then?!")
-else:
-    print("Please enter a valid answer!")
+print('Timer set for',b,'seconds.')
+while True:
+    response = input("Do you want to start the timer? y/n \n")
+    response = response.lower()
+    if response == "y":
+        print(b or a)
+        while True:
+            time.sleep(1)
+            a -= 1
+            print(a)
+            if a == 0:
+                print(b,"seconds is up!")
+                input('Press enter to exit...')
+                break
+        break
+    elif response == "n":
+        print("Why did you even run this program then?!")
+    else:
+        print("Please enter a valid answer!")
+print('Closed program mainloop')
