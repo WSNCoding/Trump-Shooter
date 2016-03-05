@@ -3,13 +3,13 @@ import os
 from tkinter import *
 #Modular imports
 from player import *
-from tkinterButtons import *
-from player import *
+import tkinterButtons as btns
+import player as plyr
 #Define mainloop
 def main():
   print('Running main.py')
-  windowCode()
-  player()
+  btns.windowCode()
+  plyr.player()
 
 if __name__=='__main__':
   main()

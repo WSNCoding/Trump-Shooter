@@ -1,9 +1,8 @@
-import tkinter as tkinter
 from tkinter import *
 
 def player():
-
-    root = Tk()
+    import tkinter  #Local function import
+    root = tkinter.Tk()
     
     trump = PhotoImage("\textures\GetAttachment.jpg");
     label = Label(root, image=trump)
