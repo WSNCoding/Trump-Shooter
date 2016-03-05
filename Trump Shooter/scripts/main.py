@@ -1,7 +1,8 @@
-import tkinter as tkinter
-import tkinterButtons
-import player
+#Library imports
+import os
 from tkinter import *
+#Modular imports
+from player import *
 from tkinterButtons import *
 from player import *
 
