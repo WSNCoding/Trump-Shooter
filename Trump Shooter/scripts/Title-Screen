@@ -32,4 +32,4 @@ bttn1.config(text = "Been clicked" + str(count))
 
 
 
-root.mainloop(
+root.mainloop()#run window stuff
