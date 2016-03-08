@@ -1,0 +1,35 @@
+import Tkinter as t
+from Tkinter import *
+
+root = t.Tk()
+frame = Frame(root)
+canvas = t.Canvas()
+root.title("Leos buttons")
+root.geometry("300x300")
+
+def func_count():
+    global count
+    count=count+1
+    print(count)
+    global bttn1
+    bttn1.config(text = "Been clicked" + str(count))
+
+
+
+frame.grid()
+bttn1 = Button(frame, text="Click me")
+bttn1.grid()
+bttn1.lbl = Label(frame,text="Life")
+bttn1.lbl.grid(row=1,column=1,columnspan=2,sticky = W)
+count = 0
+bttn1.config(command=func_count)
+
+
+
+
+bttn1.config(text = "Been clicked" + str(count))
+
+
+
+
+root.mainloop(
