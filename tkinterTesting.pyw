@@ -8,7 +8,7 @@ WIDTH=3000
 #Setup of window
 root.title(TITLE)
 #root.wm_iconbitmap("favicon.ico")
-window = tk.Canvas(root,bg="blue",height=HEIGHT,width=WIDTH)
+window = tk.Canvas(root,bg="#008080",height=HEIGHT,width=WIDTH)
 
 #Defining Widgets
 class player():
@@ -16,7 +16,7 @@ class player():
         self.size = size
         self.x = x
         self.y = y
-        self.player = window.create_rectangle((x,y,x+size,y+size),fill="red")
+        self.player = tk.PhotoImage(file = 'drunk_trump.gif')
     def left(self,window):
         self.x=self.x-10
         window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
@@ -53,4 +53,3 @@ window.bind("<Key>", key)
 #Create program
 window.pack()
 root.mainloop()
-
