@@ -37,19 +37,20 @@ class player():
 square=player(window,x=100,y=100,size=300)
 
 #Control Key Binds
-up = 'UIp';  down = 'Down';  left = 'Left';  right = 'Right'
+up = 'Up';  down = 'Down';  left = 'Left';  right = 'Right'
 def key(event):
     print("Pressed:", repr(event.char))
-    if event.keysym == left:
+    if event.keysym == left or event.char == 'a':
        square.left(window)
-    if event.keysym == right:
+    if event.keysym == right or event.char == 'd':
         square.right(window)
-    if event.keysym == up:
+    if event.keysym == up or event.char == 'w':
        square.up(window)
-    if event.keysym == down:
+    if event.keysym == down or event.char == 's':
         square.down(window)
 window.focus_set()
 window.bind("<Key>", key)
 #Create program
 window.pack()
 root.mainloop()
+
