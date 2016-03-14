@@ -20,26 +20,21 @@ class player():
     def left(self,window):
         self.x=self.x-10
         window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
-        window.pack()
     def right(self,window):
         self.x=self.x+10
         window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
-        window.pack()
     def up(self,window):
         self.y=self.y-10
         window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
-        window.pack()
     def down(self,window):
         self.y=self.y+10
         window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
-        window.pack()
 #Calling Widgets
 square=player(window,x=100,y=100,size=300)
 
 #Control Key Binds
 up = "w";  down = "s";  left = "a";  right = "d"
 def key(event):
-    print("Pressed:", repr(event.char))
     if event.char == left:
        square.left(window)
     if event.char == right:
@@ -47,6 +42,14 @@ def key(event):
     if event.char == up:
        square.up(window)
     if event.char == down:
+        square.down(window)
+    if event.keysym == left: 
+       square.left(window) 
+    if event.keysym == right: 
+        square.right(window) 
+    if event.keysym == up: 
+       square.up(window) 
+    if event.keysym == down: 
         square.down(window)
 window.focus_set()
 window.bind("<Key>", key)
