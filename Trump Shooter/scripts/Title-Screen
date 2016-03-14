@@ -4,7 +4,7 @@ from Tkinter import *
 root = t.Tk()
 frame = Frame(root)
 canvas = t.Canvas()
-root.title("Leos buttons")
+root.title("Trump Shooter")
 root.geometry("300x300")
 
 def func_count():
@@ -32,4 +32,4 @@ bttn1.config(text = "Been clicked" + str(count))
 
 
 
-root.mainloop(
+root.mainloop()
