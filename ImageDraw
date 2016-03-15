@@ -1,0 +1,16 @@
+import tkinter
+from tkinter import *
+#begin code
+
+
+
+
+x_coordinate = 100
+y_coordinate = 100
+
+
+root = tkinter.Tk()
+canvas = root.canvas()
+canvas.pack()
+img = tkinter.PhotoImg("drunktrump.gif")
+can.create_image((x_coordinate, y_coordinate), img)
