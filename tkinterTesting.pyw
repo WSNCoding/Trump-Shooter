@@ -8,48 +8,45 @@ WIDTH=3000
 #Setup of window
 root.title(TITLE)
 #root.wm_iconbitmap("favicon.ico")
-window = tk.Canvas(root,bg="#008080",height=HEIGHT,width=WIDTH)
+window = tk.Canvas(root,bg="blue",height=HEIGHT,width=WIDTH)
 
 #Defining Widgets
 class player():
-    def __init__(self,window,x=0,y=0,size=100):
-        self.size = size
+    def __init__(self,window,x=0,y=0):
         self.x = x
         self.y = y
-        self.player = tk.PhotoImage(file = 'drunk_trump.gif')
+        self.img = tk.PhotoImage(file = 'drunk_trump.gif')
+        self.player = window.create_image(self.x, self.y, image = self.img)
     def left(self,window):
         self.x=self.x-10
-        window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
-        window.pack()
+        print(self.x,self.y)
+        window.coords(self.player,self.x,self.y)
     def right(self,window):
         self.x=self.x+10
-        window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
-        window.pack()
+        window.coords(self.player,self.x,self.y)
     def up(self,window):
         self.y=self.y-10
-        window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
-        window.pack()
+        window.coords(self.player,self.x,self.y)
     def down(self,window):
         self.y=self.y+10
-        window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
-        window.pack()
+        window.coords(self.player,self.x,self.y)
 #Calling Widgets
-square=player(window,x=100,y=100,size=300)
+square=player(window,x=100,y=100)
 
 #Control Key Binds
-up = 'Up';  down = 'Down';  left = 'Left';  right = 'Right'
+up = "w";  down = "s";  left = "a";  right = "d"
 def key(event):
-    print("Pressed:", repr(event.char))
-    if event.keysym == left or event.char == 'a':
+    if event.char == left or event.keysym == 'Left':
        square.left(window)
-    if event.keysym == right or event.char == 'd':
+    if event.char == right or event.keysym == 'Right':
         square.right(window)
-    if event.keysym == up or event.char == 'w':
+    if event.char == up or event.keysym == 'Up':
        square.up(window)
-    if event.keysym == down or event.char == 's':
+    if event.char == down or event.keysym == 'Down':
         square.down(window)
 window.focus_set()
 window.bind("<Key>", key)
 #Create program
 window.pack()
 root.mainloop()
+
