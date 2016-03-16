@@ -12,25 +12,26 @@ window = tk.Canvas(root,bg="blue",height=HEIGHT,width=WIDTH)
 
 #Defining Widgets
 class player():
-    def __init__(self,window,x=0,y=0,size=100):
-        self.size = size
+    def __init__(self,window,x=0,y=0):
         self.x = x
         self.y = y
-        self.player = window.create_rectangle((x,y,x+size,y+size),fill="red")
+        self.img = tk.PhotoImage(file = 'drunk_trump.gif')
+        self.player = window.create_image(self.x, self.y, image = self.img)
     def left(self,window):
         self.x=self.x-10
-        window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
+        print(self.x,self.y)
+        window.coords(self.player,self.x,self.y)
     def right(self,window):
         self.x=self.x+10
-        window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
+        window.coords(self.player,self.x,self.y)
     def up(self,window):
         self.y=self.y-10
-        window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
+        window.coords(self.player,self.x,self.y)
     def down(self,window):
         self.y=self.y+10
-        window.coords(self.player,self.x,self.y,self.x+self.size,self.y+self.size)
+        window.coords(self.player,self.x,self.y)
 #Calling Widgets
-square=player(window,x=100,y=100,size=300)
+square=player(window,x=100,y=100)
 
 #Control Key Binds
 up = "w";  down = "s";  left = "a";  right = "d"
@@ -49,7 +50,7 @@ def key(event):
         square.right(window) 
     if event.keysym == up: 
        square.up(window) 
-    if event.keysym == down: 
+    if event.keysym == down:
         square.down(window)
 window.focus_set()
 window.bind("<Key>", key)
