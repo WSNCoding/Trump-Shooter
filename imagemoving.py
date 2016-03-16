@@ -9,6 +9,7 @@ WIDTH=3000
 root.title(TITLE)
 #root.wm_iconbitmap("favicon.ico")
 window = tk.Canvas(root,bg="blue",height=HEIGHT,width=WIDTH)
+up = 'Up';  down = 'Down';  left = 'Left';  right = 'Right'
 
 #Defining Widgets
 class player():
@@ -36,25 +37,16 @@ square=player(window,x=100,y=100)
 #Control Key Binds
 up = "w";  down = "s";  left = "a";  right = "d"
 def key(event):
-    if event.char == left:
+    if event.char == left or event.keysym == 'Left':
        square.left(window)
-    if event.char == right:
+    if event.char == right or event.keysym == 'Right':
         square.right(window)
-    if event.char == up:
+    if event.char == up or event.keysym == 'Up':
        square.up(window)
-    if event.char == down:
-        square.down(window)
-    if event.keysym == left: 
-       square.left(window) 
-    if event.keysym == right: 
-        square.right(window) 
-    if event.keysym == up: 
-       square.up(window) 
-    if event.keysym == down:
+    if event.char == down or event.keysym == 'Down' :
         square.down(window)
 window.focus_set()
 window.bind("<Key>", key)
 #Create program
 window.pack()
 root.mainloop()
-
