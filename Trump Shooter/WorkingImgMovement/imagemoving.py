@@ -15,7 +15,7 @@ class player():
     def __init__(self,window,x=0,y=0):
         self.x = x
         self.y = y
-        self.img = tk.PhotoImage(file = 'drunk_trump.gif')
+        self.img = tk.PhotoImage(file = 'trumpy.gif')
         self.player = window.create_image(self.x, self.y, image = self.img)
     def left(self,window):
         self.x=self.x-10
