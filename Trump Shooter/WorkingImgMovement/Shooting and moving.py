@@ -5,13 +5,8 @@ root = tk.Tk()
 TITLE="Testing"
 HEIGHT=3000
 WIDTH=3000
-#Setup of window
-root.title(TITLE)
-#root.wm_iconbitmap("favicon.ico")
+
 window = tk.Canvas(root,bg="blue",height=HEIGHT,width=WIDTH)
-
-
-
 
 
 
@@ -36,22 +31,31 @@ class player():
     def down(self,window):
         self.y=self.y+10
         window.coords(self.player,self.x,self.y)
+        if self.y == 0:
+            
+            window.coords(self.player,self.x+30,self.y)
+
     def Shoot(self,window):
-        self.img = tk.PhotoImage(file = 'trumpy.gif')
-        self.player = window.create_image(self.x, self.y, image = self.img)
-        while(count<5):
-            self.y=self.y+10
-            window.coords(self.player,self.x,self.y   
+        self.bulletX = self.x
+        self.bulletY = self.y
 
-            count = count + 1
-            if(count == 5):
-                count = count - 1
-            time.sleep(1)        
-#Calling Widgets
-square=player(window,x=100,y=100)
+        self.dolla = tk.PhotoImage(file = 'DollarBlast.gif')
+        self.bullet = window.create_image(self.bulletX, self.bulletY, image = self.dolla)
+        count = 0
+        print("You shooted dolla")
+        for self.count in range(0,300):
+            self.bulletY=self.bulletY+1
 
+            window.coords(self.bullet,self.bulletX,self.bulletY)
+            self.count = self.count + 1
+        if self.count == 301:
+            self.count = 0
+            
 #Control Key Binds
 up = "w";  down = "s";  left = "a";  right = "d"; space = "space"
+#Calling Widgets
+square = player(window,x=100,y=100)
+
 def key(event):
     if event.char == left:
        square.left(window)
@@ -70,11 +74,25 @@ def key(event):
     if event.keysym == down:
         square.down(window)
     if event.keysym == space:
-        square.shoot(window)
-        
+        square.Shoot(window)
+
+
+
+       
 window.focus_set()
 window.bind("<Key>", key)
 #Create program
 window.pack()
+#moved stuff due to blocks
+
+
+#Setup of window
+root.title(TITLE)
+#root.wm_iconbitmap("favicon.ico")
+
+
+
+
+
 root.mainloop()
 
