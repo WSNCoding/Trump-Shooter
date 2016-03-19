@@ -41,15 +41,20 @@ class player():
 
         self.dolla = tk.PhotoImage(file = 'DollarBlast.gif')
         self.bullet = window.create_image(self.bulletX, self.bulletY, image = self.dolla)
-        count = 0
-        print("You shooted dolla")
-        for self.count in range(0,300):
-            self.bulletY=self.bulletY+1
-
+        while self.bulletY < 3030:
+            self.bulletY = self.bullet+1
             window.coords(self.bullet,self.bulletX,self.bulletY)
-            self.count = self.count + 1
-        if self.count == 301:
-            self.count = 0
+
+        count = 0
+        
+        print("You shooted dolla")
+        #for self.count in range(0,300):
+            #self.bulletY=self.bulletY+1
+
+           # window.coords(self.bullet,self.bulletX,self.bulletY)
+          #  self.count = self.count + 1
+        #if self.count == 301:
+         #   self.count = 0
             
 #Control Key Binds
 up = "w";  down = "s";  left = "a";  right = "d"; space = "space"
