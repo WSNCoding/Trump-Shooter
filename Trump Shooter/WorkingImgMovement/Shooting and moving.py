@@ -36,16 +36,20 @@ class player():
             window.coords(self.player,self.x+30,self.y)
 
     def Shoot(self,window):
-        self.bulletX = self.x
-        self.bulletY = self.y
+        bulletX = self.x
+        bulletY = self.y
 
         self.dolla = tk.PhotoImage(file = 'DollarBlast.gif')
-        self.bullet = window.create_image(self.bulletX, self.bulletY, image = self.dolla)
+        bullet = window.create_image(self.bulletX, self.bulletY, image = self.dolla)
         while self.bulletY < 3030:
             self.bulletY = self.bullet+1
-            window.coords(self.bullet,self.bulletX,self.bulletY)
+            moveBullet(window)
 
         count = 0
+
+
+    def moveBullet(self,window):
+        window.coords(bullet,bulletX,bulletY)
         
         print("You shooted dolla")
         #for self.count in range(0,300):
