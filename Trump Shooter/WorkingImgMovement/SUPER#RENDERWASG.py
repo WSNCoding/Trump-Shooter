@@ -12,6 +12,7 @@ from tkinter import *
 
 class Everything():
 
+    timestart=time.clock()
 
     playerposX = 100
     playerposY = 100
@@ -20,7 +21,7 @@ class Everything():
         global root
         global window
         root = tk.Tk()
-        window = tk.Canvas()
+        window = tk.Canvas(root,width=300,height=300)
         root.geometry("300x300")
         window.pack()
 
@@ -29,7 +30,11 @@ class Everything():
         print("starting")
         self.makewin()
         print("images being created, leo is the best by the way")
-        global trump 
+        self.i=33
+
+        
+        global trump
+        
         global bullet
         trump =  PhotoImage(file="trumpy.gif")
         bullet =  PhotoImage(file="DollarBlast.gif")
@@ -45,6 +50,10 @@ class Everything():
 
     def renderandupdate(self):
         window.delete("all")
+        self.i+=1
+        if self.i%33==0:
+            print ("%.02f FPS"%(self.i/(time.clock()-self.timestart)))
+
         self.update()
         window.update()
         window.after(10,self.renderandupdate)
