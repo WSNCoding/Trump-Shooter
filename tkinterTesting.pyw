@@ -24,12 +24,15 @@ class player():
         window.coords(self.player,self.x,self.y)
     def right(self,window):
         self.x=self.x+10
+        print(self.x,self.y)
         window.coords(self.player,self.x,self.y)
     def up(self,window):
         self.y=self.y-10
+        print(self.x,self.y)
         window.coords(self.player,self.x,self.y)
     def down(self,window):
         self.y=self.y+10
+        print(self.x,self.y)
         window.coords(self.player,self.x,self.y)
 #Calling Widgets
 square=player(window,x=100,y=100)
