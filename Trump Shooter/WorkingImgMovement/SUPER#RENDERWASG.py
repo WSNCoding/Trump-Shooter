@@ -43,11 +43,9 @@ class Everything():
 
         global playerposX
         global playerposY
+        window.mainloop()
         
-    def draw(self):       
-        window.create_image(self.playerposX, self.playerposY, image=trump)
-      
-
+    
     def renderandupdate(self):
         window.delete("all")
         self.i+=1
@@ -60,7 +58,7 @@ class Everything():
         
 
     def update(self):
-        self.draw()
+        window.create_image(self.playerposX, self.playerposY, image=trump)
 
 
     def KeyHandler(self,event):
@@ -83,5 +81,5 @@ class Everything():
 
 print("Starting...")
 Everything()
-    
+root.mainloop()
     
