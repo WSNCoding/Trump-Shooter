@@ -68,12 +68,21 @@ class Everything():
 
     def update(self):
         window.create_image(self.playerposX, self.playerposY, image=trump)
-        if (self.playerposY >50) & (self.playerposY<570):
-            self.playerposY+=self.moveY
 
-        if (self.playerposX > 0) & (self.playerposX < 800):
-            self.playerposX+=self.moveX
-        
+        if (self.playerposY > 510) & (self.moveY>0):
+            self.moveY=0
+            print("going ina direction called up")
+        if (self.playerposY < 100) & (self.moveY<0):
+            self.moveY=0
+
+        if (self.playerposX > 710) & (self.moveX>0):
+            self.moveX=0
+            
+        if (self.playerposX < 70) & (self.moveX<0):
+            self.moveX=0      
+
+        self.playerposY+=self.moveY
+        self.playerposX+=self.moveX  
  
     def handleKeyPress(self,event):
 
@@ -83,7 +92,7 @@ class Everything():
             self.moveX=self.moveSpeed
         if (event.char=="w"):
             self.moveY=-self.moveSpeed
-        if (event.char=="x"):
+        if (event.char=="s"):
             self.moveY=self.moveSpeed
 
     def handleKeyRelease(self,event):
@@ -94,7 +103,7 @@ class Everything():
             self.moveX=0
         if (event.char=="w"):
             self.moveY=0
-        if (event.char=="x"):
+        if (event.char=="s"):
             self.moveY=0
 
         print("Key released"+event.char)
@@ -107,6 +116,33 @@ class makeimage():
     def drawimage(imagename,x,y):
         window.create_image(x,y, image = imagename)
     
+
+
+
+
+
+class bullet():
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 print("Starting...")
