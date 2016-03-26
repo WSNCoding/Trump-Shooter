@@ -1,8 +1,8 @@
 ###This game is still a work in progress so the game will not work if you download it.
 
-We're having a bunch of fun with this game and we hope you will like it when its ready for release
+We had a bunch of fun with this game and we hope you will like it when its ready for release
 
-With the help of a small loan of a million dollars, (Kidding) a group of teenagers have potentially
+With the help of a small loan of a million dollars, a group of teenagers have potentially
 made the most epic game of all time, Donald = Love, Donald = Life.
 
 
