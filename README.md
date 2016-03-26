@@ -1,10 +1,9 @@
-With the help of a small loan of a million dollars, a group of teenagers have potentially
-made the most epic game of all time, Donald = Love, Donald = Life.
+#With the help of a small loan of a million dollars, a group of teenagers have potentially
+#made the most epic game of all time, Donald = Love, Donald = Life.
 
-#       //
 #      //
-#   ( ͡° ͜ʖ ͡°)
-      But a bit more orange :D
+#( ͡° ͜ʖ ͡°)
+But a bit more orange, :D
       
       
    **DISCLAIMER** 
