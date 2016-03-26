@@ -3,7 +3,7 @@ made the most epic game of all time, Donald = Love, Donald = Life.
 
 This is some fanart
 
-######:open_mouth
+######☺
 
 Like this but a bit more orange, :D
 
