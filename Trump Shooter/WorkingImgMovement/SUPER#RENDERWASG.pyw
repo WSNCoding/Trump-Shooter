@@ -30,7 +30,7 @@ class Everything():
 
 
     def __init__(self):
-        print("Starting...30%")
+        print("Game Loaded...100%")
         self.makewin()
         print("Images being created, leo is the best by the way, JK")
         self.i=33
@@ -106,9 +106,35 @@ class makeimage():
     def drawimage(imagename,x,y):
         window.create_image(x,y, image = imagename)
     
+print("Starting...3%")
+print("Starting...7%")
+print("Starting...9%")
+print("Starting...14%")
+print("Starting...19%")
+print("Starting...25%")
+print("Starting...29%")
+print("Starting...33%")
+print("Starting...37%")
+print("Starting...41%")
+print("Starting...48%")
+print("Starting...51%")
+print("Starting...52%")
+print("Starting...54%")
+print("Starting...57%")
+print("Starting...59%")
+print("Starting...60%")
+print("Starting...63%")
+print("Starting...67%")
+print("Starting...70%")
+print("Starting...72%")
+print("Starting...75%")
+print("Starting...78%")
+print("Starting...80%")
+print("Starting...84%")
+print("Starting...89%")
+print("Starting...93%")
+print("Starting...96%")
 
-
-print("Starting...")
 Everything()
 root.mainloop()
     
