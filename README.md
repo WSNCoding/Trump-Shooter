@@ -3,9 +3,9 @@ made the most epic game of all time, Donald = Love, Donald = Life.
 
 This is some fanart
 
-######☺
+#######:P <(ME DONALD TRUMP)
 
-Like this but a bit more orange, :D
+Its meant to be a bit more orange though, :D
 
       
       
