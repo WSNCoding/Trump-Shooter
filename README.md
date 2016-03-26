@@ -3,9 +3,8 @@ made the most epic game of all time, Donald = Love, Donald = Life.
 
 This is some fanart
 
-    //
-#(͡° ͜ʖ ͡°)
-But a bit more orange, :D
+)https://ch3302files.storage.live.com/y3pwBdvYg2gzKNeFkzXYTwDEywsDlrc6RRCdjnvWaz-L5ztPDw85phYOqIrcFRn1bD57t-_Jbo_nWRIjNbcvk8qNH12wFhlrQtODB4qUmgDnXq5zSZGW3gTt1br3VwOcbOm5RtQbP5u7xYu8n8guluv0A/Gangsta%20Trump.png?psid=1&width=676&height=606)
+Like this but a bit more orange, :D
       
       
    **DISCLAIMER** 
