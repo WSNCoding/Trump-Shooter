@@ -4,16 +4,16 @@ made the most epic game of all time, Donald = Love, Donald = Life.
 Heres some fanart
  
  
-         // 
-        //
-     __//_____
-    / ""     "" \
-   | (O)     (O)|
-   |      L     |
-   |            |
-   | \________/ |
-   \____________/
-   
+**         // 
+          //
+       __//_____
+      / ""     "" \
+     | (O)     (O)|
+     |      L     |
+     |            |
+     | \________/ |
+     \____________/
+   But a bit more orange :D
    
    
    
