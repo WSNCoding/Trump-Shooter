@@ -18,7 +18,7 @@ class Everything():
     playerposY = 250
     moveX = 0
     moveY = 0
-    moveSpeed = 10
+    moveSpeed = 5
     
     def makewin(self):      
         global root
@@ -30,9 +30,9 @@ class Everything():
 
 
     def __init__(self):
-        print("starting")
+        print("Starting...30%")
         self.makewin()
-        print("images being created, leo is the best by the way")
+        print("Images being created, leo is the best by the way, JK")
         self.i=33
 
        
@@ -62,42 +62,41 @@ class Everything():
             print ("%.02f FPS"%(self.i/(time.clock()-self.timestart)))
 
         self.update()
-        window.update()
+#        window.update()
         window.after(10,self.renderandupdate)
         
 
     def update(self):
         window.create_image(self.playerposX, self.playerposY, image=trump)
-        if (self.playerposY >50) & (self.playerposY<570):
+        if (self.playerposY > 50) & (self.playerposY < 570):
             self.playerposY+=self.moveY
 
         if (self.playerposX > 0) & (self.playerposX < 800):
-            self.playerposX+=self.moveX
-        
+            self.playerposX+=self.moveX     
  
-    def handleKeyPress(self,event):
+    def handleKeyPress(self,event):   #Movement request detection
 
-        if (event.char == "a"):
-            self.moveX=-self.moveSpeed
-        if (event.char =="d"):
-            self.moveX=self.moveSpeed
-        if (event.char=="w"):
-            self.moveY=-self.moveSpeed
-        if (event.char=="x"):
-            self.moveY=self.moveSpeed
+        if event.char == "a" or event.keysym == 'Left' and self.playerposX > 0:
+            self.moveX =- self.moveSpeed
+        if event.char =="d" or event.keysym == 'Right' and self.playerposX < 800:
+            self.moveX = self.moveSpeed
+        if event.char =="w" or event.keysym == 'Up' and self.playerposY > 50:
+            self.moveY =- self.moveSpeed
+        if event.char =="s" or event.keysym == 'Down' and self.playerposY < 570:
+            self.moveY = self.moveSpeed
 
     def handleKeyRelease(self,event):
 
-        if (event.char == "a"):
+        if event.char == "a" or event.keysym == 'Left' and self.playerposX > 0:
             self.moveX=0
-        if (event.char =="d"):
+        if event.char =="d" or event.keysym == 'Right':
             self.moveX=0
-        if (event.char=="w"):
+        if event.char=="w" or event.keysym == 'Up':
             self.moveY=0
-        if (event.char=="x"):
+        if event.char=="s" or event.keysym == 'Down':
             self.moveY=0
 
-        print("Key released"+event.char)
+        print("Key released: "+event.char)
 
 
 
