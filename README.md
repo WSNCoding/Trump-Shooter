@@ -32,3 +32,7 @@ By the way Donald, we love what you've done with your hair, It's just perfection
    any supporters of Trump, anything in the game does not reflect any 
    of our opinions, this just a silly game, however WSNCoding is the owner of anything
    found in this repository so please dont copy it, Thx.
+
+
+
+Trump-Shooter / Gangsta Trump.png 
