@@ -6,10 +6,9 @@ from tkinter import *
 
 #player pos
 
-
+maxBullets = 3
 
 #end of player pos
-
 class Everything:
 
     timestart=time.clock()
@@ -109,8 +108,11 @@ class Everything:
             self.moveY=self.moveSpeed
 
         if (event.char==" "):
-            self.Bullets.append(bullet(self.playerposX , self.playerposY))
-            print("Fire!"+str(self.Bullets.__len__()))
+            if(self.Bullets.__len__() < maxBullets):
+            
+                
+                self.Bullets.append(bullet(self.playerposX , self.playerposY))
+                print("Fire!"+str(self.Bullets.__len__()))
 
     def handleKeyRelease(self,event):
 
@@ -142,7 +144,8 @@ class bullet:
     xpos=0
     ypos=0
     visible=False
-
+    
+    
     def __init__(self, x,y):
         self.ypos = y
         self.xpos = x
