@@ -6,7 +6,7 @@ from tkinter import *
 
 #player pos
 
-maxBullets = 3
+
 
 #end of player pos
 class Everything:
@@ -17,9 +17,9 @@ class Everything:
     playerposY = 250
     moveX = 0
     moveY = 0
-    moveSpeed = 10
+    moveSpeed = 20
     num = 0
-
+    MaxBullets = 4
 
     
     def makewin(self):      
@@ -108,9 +108,7 @@ class Everything:
             self.moveY=self.moveSpeed
 
         if (event.char==" "):
-            if(self.Bullets.__len__() < maxBullets):
-            
-                
+            if(self.Bullets.__len__() < self.MaxBullets):            
                 self.Bullets.append(bullet(self.playerposX , self.playerposY))
                 print("Fire!"+str(self.Bullets.__len__()))
 
@@ -144,7 +142,7 @@ class bullet:
     xpos=0
     ypos=0
     visible=False
-    
+    BulletSpeed = 8
     
     def __init__(self, x,y):
         self.ypos = y
@@ -156,7 +154,7 @@ class bullet:
     def moveBullet(self):
         self.newtime = time.clock()
         if (self.newtime-self.lasttime)>0.005:
-            self.ypos-=2
+            self.ypos-=self.BulletSpeed
             self.lasttime=self.newtime
             if (self.ypos < 10):
                 self.visible=False
