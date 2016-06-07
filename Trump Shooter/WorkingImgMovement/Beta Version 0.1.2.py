@@ -17,7 +17,7 @@ class Everything:
     playerposY = 250
     moveX = 0
     moveY = 0
-    moveSpeed = 20
+    moveSpeed = 5
     num = 0
     MaxBullets = 4
 
@@ -106,6 +106,14 @@ class Everything:
             self.moveY=-self.moveSpeed
         if (event.char=="s"):
             self.moveY=self.moveSpeed
+        if (event.char == "A"):
+            self.moveX=-self.moveSpeed
+        if (event.char =="D"):
+            self.moveX=self.moveSpeed
+        if (event.char=="W"):
+            self.moveY=-self.moveSpeed
+        if (event.char=="S"):
+            self.moveY=self.moveSpeed
 
         if (event.char==" "):
             if(self.Bullets.__len__() < self.MaxBullets):            
@@ -121,6 +129,14 @@ class Everything:
         if (event.char=="w"):
             self.moveY=0
         if (event.char=="s"):
+            self.moveY=0
+        if (event.char == "A"):
+            self.moveX=0
+        if (event.char =="D"):
+            self.moveX=0
+        if (event.char=="W"):
+            self.moveY=0
+        if (event.char=="S"):
             self.moveY=0
 
         print("Key released"+event.char)
