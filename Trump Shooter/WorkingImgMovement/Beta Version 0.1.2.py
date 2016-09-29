@@ -34,7 +34,7 @@ class Everything:
     def __init__(self):
         print("starting")
         self.makewin()
-        print("images being created, leo is the best by the way")
+        print("images being created, leo & ori are the best by the way")
         self.i=33
 
         global bulletimg
@@ -83,7 +83,7 @@ class Everything:
         
         if (self.playerposY > 510) & (self.moveY>0):
             self.moveY=0
-            print("going ina direction called up")
+            print("going in a direction called up")
         if (self.playerposY < 100) & (self.moveY<0):
             self.moveY=0
 
@@ -139,7 +139,10 @@ class Everything:
         if (event.char=="S"):
             self.moveY=0
 
-        print("Key released"+event.char)
+        if (event.char==" "):
+            print("Fire button released")
+        else:
+            print(event.char + " Key released")
 
 
 
